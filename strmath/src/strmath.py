@@ -1,13 +1,4 @@
-def truncate_left(s):
-    return reversed(truncate_right(reversed(s)))
-
-
-def truncate_right(s):
-    return ''.join(c for c, _ in zip(s, '00000000000000000000000000000000'))
-
-
-def last(s):
-    return s[-1]
+from collections import deque
 
 
 class StrNum(object):
@@ -51,7 +42,7 @@ class StrNum(object):
 
     def __add__(self, other):
 
-        def bit_gen():
+        def sum_bits():
             carry = '0'
             for x in zip(self._value, other._value):
                 if x == ('0', '0'):
@@ -62,24 +53,27 @@ class StrNum(object):
                     carry = '1'
                 else:
                     yield '1' if carry == '0' else '0'
-        return StrNum(''.join(bit_gen()), binary=True)
+
+        return StrNum(''.join(sum_bits()), binary=True)
 
     def __lshift__(self, other):
         b = one
-        s = self._value
+        bits = deque(self._value)
         while b <= other:
-            s = truncate_right('0' + s)
+            bits.appendleft('0')
+            bits.pop()
             b = b + one
-        return StrNum(s, binary=True)
+        return StrNum(''.join(bits), binary=True)
 
     def __rshift__(self, other):
         b = one
-        s = self._value
-        c = '1' if self.__is_negative() else '0'
+        bits = deque(self._value)
+        sign_bit = '1' if self.__is_negative() else '0'
         while b <= other:
-            s = truncate_left(s + c)
+            bits.append(sign_bit)
+            bits.popleft()
             b += one
-        return StrNum(s, binary=True)
+        return StrNum(''.join(bits), binary=True)
 
     def __neg__(self):
         one_complement = ''.join('1' if c == '0' else '0' for c in self._value)
@@ -89,7 +83,7 @@ class StrNum(object):
         return self + -other
 
     def __is_negative(self):
-        return last(self._value) == '1'
+        return ('1', '1') in zip(self._value, '00000000000000000000000000000001')
 
     def __abs__(self):
         return -self if self.__is_negative() else self
@@ -114,13 +108,14 @@ class StrNum(object):
 
     def __mul__(self, other, mod=None):
         if self.__is_negative():
-            return -(-self).__mul__(other, mod)
+            return -(-self).__mul__(other, -mod if mod else None)
         result = zero
+        if mod: other %= mod
         for b in reversed(self._value):
             result <<= one
             if b == '1':
                 result += other
-            while mod and result >= mod:
+            while mod and (result <= mod < zero or zero < mod <= result):
                 result -= mod
         return result
 
@@ -162,17 +157,16 @@ class StrNum(object):
         return r
 
     def __pow__(self, n, mod=None):
-        if mod and self >= mod:
-            return pow((self % mod), n, mod)
+        base = self % mod if mod else self
         p = one
         for b in reversed(n._value):
             p = p.__mul__(p, mod)
             if b == '1':
-                p = p.__mul__(self, mod)
+                p = p.__mul__(base, mod)
         return p
 
     def __repr__(self):
-        return "StrNum('%s')" % str(self)
+        return f"StrNum('{self}')"
 
     def __str__(self):
         if self == zero: return '0'

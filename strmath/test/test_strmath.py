@@ -1,63 +1,117 @@
+from random import randrange
 from unittest import TestCase
 from time import perf_counter as now
 
 from strmath.src.strmath import StrNum
 
 
-class TestStrmath(TestCase):
-    def testInit(self):
+class TestStrNum(TestCase):
+    def test_init(self):
         eleven = StrNum('11')
         self.assertIsNotNone(eleven, "eleven should be a Number instance")
         eleven_1 = StrNum('11010000000000000000000000000000', binary=True)
         self.assertIsNotNone(eleven_1, "eleven_1 should be a Number instance")
         self.assertEqual(eleven, eleven_1)
 
-    def testValue(self):
+    def test_value(self):
         eleven = StrNum('11')
         self.assertEqual('11010000000000000000000000000000', eleven._value)
 
-    def testNeg(self):
+    def test_neg(self):
         self.assertEqual(StrNum('-3'), -StrNum('3'))
 
-    def testAdd(self):
+    def test_add(self):
         eleven = StrNum('11')
         twelve = StrNum('12')
         self.assertEqual(eleven + twelve, StrNum('23'))
 
-    def testMul(self):
-        op1 = StrNum('123456')
-        op2 = StrNum('654321')
-        mod = StrNum('675')
-        self.assertEqual(op1.__mul__(op2, mod), StrNum(str(123456 * 654321 % 675)))
-        op1 = StrNum('327')
-        op2 = StrNum('765')
-        self.assertEqual(op1 * op2, StrNum(str(327 * 765)))
-
-    def testDivmod(self):
-        self.assertEqual(divmod(StrNum('140'), StrNum('12')), (StrNum('11'), StrNum('8')))
-
-    def testDiv(self):
-        self.assertEqual(StrNum('140') // StrNum('12'), StrNum('11'))
-
-    def testModulo(self):
-        self.assertEqual(StrNum('140') % StrNum('12'), StrNum('8'))
-
-    def testPow(self):
+    def test_mul(self):
         start = now()
-        base = StrNum('4020034')
-        exponent = StrNum('168945678')
-        mod = StrNum('75242567')
-        n = pow(4020034, 168945678, 75242567)
-        self.assertTrue(isinstance(n, int))
-        expected = StrNum(str(n))
-        self.assertTrue(isinstance(expected, StrNum))
-        self.assertEqual(pow(base, exponent, mod), expected)
-        print(now() - start)
+        bound = int(1e9)
+        for _ in range(10):
+            op1 = randrange(-bound, bound + 1)
+            op2 = randrange(-bound, bound + 1)
+            mod = randrange(-bound, bound)
+            if mod == 0: mod = bound
+            expected = StrNum(str(op1 * op2 % mod))
+            actual = StrNum(str(op1)).__mul__(StrNum(str(op2)), StrNum(str(mod)))
+            self.assertEqual(expected, actual, f"Failed for op1 = {op1}, op2 = {op2}, mod = {mod}")
+        bound = int(1e4)
+        for _ in range(10):
+            op1 = randrange(-bound, bound + 1)
+            op2 = randrange(-bound, bound + 1)
+            expected = StrNum(str(op1 * op2))
+            actual = StrNum(str(op1)).__mul__(StrNum(str(op2)))
+            self.assertEqual(expected, actual, f"Failed for op1 = {op1}, op2 = {op2}")
+        print(f'test_mul: {now() - start}')
 
-    def testRepr(self):
-        n = StrNum('123456')
-        self.assertEqual(repr(n), "StrNum('123456')")
+    def test_divmod(self):
+        start = now()
+        bound = int(1e9)
+        for _ in range(10):
+            dividend = randrange(-bound, bound + 1)
+            divisor = randrange(-bound, bound)
+            if divisor == 0: divisor = bound
+            q, r = divmod(dividend, divisor)
+            expected = (StrNum(str(q)), StrNum(str(r)))
+            actual = divmod(StrNum(str(dividend)), StrNum(str(divisor)))
+            self.assertEqual(expected, actual, f"Failed for dividend = {dividend}, divisor = {divisor}")
+        print(f'test_divmod: {now() - start}')
 
-    def testStr(self):
-        n = StrNum('6543210')
-        self.assertEqual(str(n), '6543210')
+    def test_div(self):
+        start = now()
+        bound = int(1e9)
+        for _ in range(10):
+            dividend = randrange(-bound, bound + 1)
+            divisor = randrange(-bound, bound)
+            if divisor == 0: divisor = bound
+            expected = StrNum(str(dividend // divisor))
+            actual = StrNum(str(dividend)) // StrNum(str(divisor))
+            self.assertEqual(expected, actual, f"Failed for dividend = {dividend}, divisor = {divisor}")
+        print(f'test_div: {now() - start}')
+
+    def test_modulo(self):
+        start = now()
+        bound = int(1e9)
+        for _ in range(10):
+            dividend = randrange(-bound, bound + 1)
+            divisor = randrange(-bound, bound)
+            if divisor == 0: divisor = bound
+            expected = StrNum(str(dividend % divisor))
+            actual = StrNum(str(dividend)) % StrNum(str(divisor))
+            self.assertEqual(expected, actual, f"Failed for dividend = {dividend}, divisor = {divisor}")
+        print(f'test_modulo: {now() - start}')
+
+    def test_pow_with_mod(self):
+        start = now()
+        bound = int(1e9)
+        for _ in range(10):
+            base = randrange(-bound, bound + 1)
+            exp = randrange(1, bound + 1)
+            mod = randrange(-bound, bound)
+            if mod == 0: mod = bound
+            expected = StrNum(str(pow(base, exp, mod)))
+            actual = pow(StrNum(str(base)), StrNum(str(exp)), StrNum(str(mod)))
+            self.assertEqual(expected, actual, f"Failed for base = {base}, exp = {exp}, mod = {mod}")
+        print(f'test_pow_with_mod: {now() - start}')
+
+    def test_pow_without_mod(self):
+        self.assertEqual(StrNum('3') ** StrNum('4'), StrNum('81'))
+        self.assertEqual(StrNum('5') ** StrNum('6'), StrNum('15625'))
+        self.assertEqual(StrNum('100') ** StrNum('2'), StrNum('10000'))
+
+    def test_repr(self):
+        bound = int(1e9)
+        for _ in range(10):
+            n = randrange(-bound, bound + 1)
+            expected = f"StrNum('{str(n)}')"
+            actual = repr(StrNum(str(n)))
+            self.assertEqual(expected, actual)
+
+    def test_str(self):
+        bound = int(1e9)
+        for _ in range(10):
+            n = randrange(-bound, bound + 1)
+            expected = str(n)
+            actual = str(StrNum(str(n)))
+            self.assertEqual(expected, actual)

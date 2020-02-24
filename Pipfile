@@ -10,6 +10,7 @@ matplotlib = "*"
 jupyterlab = "*"
 pyperclip = "*"
 jupyter = "*"
+timethis = "*"
 
 [requires]
 python_version = "3.7"
