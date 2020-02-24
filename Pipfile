@@ -7,10 +7,10 @@ verify_ssl = true
 
 [packages]
 matplotlib = "*"
-jupyterlab = "*"
 pyperclip = "*"
 jupyter = "*"
 timethis = "*"
+nbdev = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8"

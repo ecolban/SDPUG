@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?> <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
 <polygon stroke="none" fill="#000000" points="0 0 300 0 300 300 0 300"/>
 <polygon stroke="#ffffff" fill="none" points="10 10 290 10 290 290 10 290"/>
-<line x1="10" y1="130.0" x2="50.0" y2="10" stroke="#ffff00"/>
-<line x1="50.0" y1="290" x2="143.2" y2="10" stroke="#ffff00"/>
-<line x1="143.2" y1="290" x2="236.8" y2="10" stroke="#ffff00"/>
-<line x1="236.8" y1="290" x2="290" y2="130.0" stroke="#ffff00"/>
-<line x1="10" y1="83.2" x2="120.0" y2="10" stroke="#00ffff"/>
-<line x1="120.0" y1="290" x2="290" y2="176.8" stroke="#00ffff"/>
-<line x1="10" y1="176.8" x2="260.0" y2="10" stroke="#00ffff"/>
-<line x1="260.0" y1="290" x2="290" y2="270.0" stroke="#00ffff"/>
-<line x1="10" y1="270.0" x2="290" y2="83.2" stroke="#00ffff"/>
-<line x1="10" y1="200.0" x2="190.0" y2="290" stroke="#ff00ff"/>
-<line x1="190.0" y1="10" x2="290" y2="60.0" stroke="#ff00ff"/>
-<line x1="10" y1="60.0" x2="290" y2="200.0" stroke="#ff00ff"/>
+<line x1="10.0" y1="130.0" x2="50.0" y2="10.0" stroke="#ffff00"/>
+<line x1="50.0" y1="290.0" x2="143.33" y2="10.0" stroke="#ffff00"/>
+<line x1="143.33" y1="290.0" x2="236.67" y2="10.0" stroke="#ffff00"/>
+<line x1="236.67" y1="290.0" x2="290.0" y2="130.0" stroke="#ffff00"/>
+<line x1="10.0" y1="83.33" x2="120.0" y2="10.0" stroke="#00ffff"/>
+<line x1="120.0" y1="290.0" x2="290.0" y2="176.67" stroke="#00ffff"/>
+<line x1="10.0" y1="176.67" x2="260.0" y2="10.0" stroke="#00ffff"/>
+<line x1="260.0" y1="290.0" x2="290.0" y2="270.0" stroke="#00ffff"/>
+<line x1="10.0" y1="270.0" x2="290.0" y2="83.33" stroke="#00ffff"/>
+<line x1="10.0" y1="200.0" x2="190.0" y2="290.0" stroke="#ff00ff"/>
+<line x1="190.0" y1="10.0" x2="290.0" y2="60.0" stroke="#ff00ff"/>
+<line x1="10.0" y1="60.0" x2="290.0" y2="200.0" stroke="#ff00ff"/>
 <circle cx="30" cy="270" r="2" stroke="#ffffff" fill="#ffffff"/>
 <circle cx="30" cy="230" r="2" stroke="#ffffff" fill="#ffffff"/>
 <circle cx="30" cy="190" r="2" stroke="#ffffff" fill="#ffffff"/>

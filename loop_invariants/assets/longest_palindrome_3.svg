@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Created with Drawmetry (http://www.drawmetry.com/)--><svg xmlns="http://www.w3.org/2000/svg" width="774.00" height="227.00" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dm="http://www.drawmetry.com">
+  <defs/>
+  <g transform="translate(0.00, 25.35)">
+    <polyline id="L_0" stroke="#000000" stroke-width="1.0" fill="none" points="49.0000 87.6500 49.0000 67.6500 762.0000 67.6500 762.0000 87.6500"/>
+    <line id="L_1" x1="49.0000" y1="87.6500" x2="762.0000" y2="87.6500" stroke="#000000" stroke-width="1.0"/>
+    <text id="C_0" font-family="Arial" font-size="16" fill="#000000" transform="matrix(1.00, 0.00, 0.00, 1.00, -6.00, -19.35)">
+      <dm:cell-dimension x="16.00" y="84.00" width="36.00" height="27.00" visible="true"/>
+      <dm:cell-format halign="center" valign="center"/>
+      <tspan x="23.11" y="103.05">s =</tspan>
+    </text>
+    <line id="L_2" x1="370.0000" y1="67.6500" x2="370.0000" y2="87.6500" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_3" x1="378.0000" y1="67.6500" x2="378.0000" y2="87.6500" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_4" x1="604.0000" y1="67.6500" x2="604.0000" y2="87.6500" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_5" x1="612.0000" y1="67.6500" x2="612.0000" y2="87.6500" stroke="#000000" stroke-width="1.0"/>
+    <polyline id="L_6" stroke="#000000" stroke-width="1.0" fill="none" points="136.0000 67.6500 136.0000 87.6500 136.0000 161.0000"/>
+    <line id="L_7" x1="144.0000" y1="67.6500" x2="144.0000" y2="87.6500" stroke="#000000" stroke-width="1.0"/>
+    <text id="C_1" font-family="Arial" font-size="16" fill="#000000" transform="matrix(1.00, 0.00, 0.00, 1.00, -61.00, -164.35)">
+      <dm:cell-dimension x="181.00" y="149.00" width="46.00" height="24.00" visible="true"/>
+      <dm:cell-format halign="center" valign="center"/>
+      <tspan x="188.44" y="166.55">start</tspan>
+    </text>
+    <text id="C_2" font-family="Arial" font-size="16" fill="#000000" transform="matrix(1.00, 0.00, 0.00, 1.00, 7.00, 18.65)">
+      <dm:cell-dimension x="181.00" y="149.00" width="46.00" height="24.00" visible="true"/>
+      <dm:cell-format halign="center" valign="center"/>
+      <tspan x="202.22" y="166.55">i</tspan>
+    </text>
+    <text id="C_3" font-family="Arial" font-size="16" fill="#000000" transform="matrix(1.00, 0.00, 0.00, 1.00, 169.00, -162.35)">
+      <dm:cell-dimension x="181.00" y="149.00" width="46.00" height="24.00" visible="true"/>
+      <dm:cell-format halign="center" valign="center"/>
+      <tspan x="195.11" y="166.55">ctr</tspan>
+    </text>
+    <text id="C_4" font-family="Arial" font-size="16" fill="#000000" transform="matrix(1.00, 0.00, 0.00, 1.00, 330.00, 18.65)">
+      <dm:cell-dimension x="188.00" y="149.00" width="39.00" height="24.00" visible="true"/>
+      <dm:cell-format halign="center" valign="center"/>
+      <tspan x="205.72" y="166.55">j</tspan>
+    </text>
+    <text id="C_5" font-family="Arial" font-size="16" fill="#000000" transform="matrix(1.00, 0.00, 0.00, 1.00, 407.00, -163.35)">
+      <dm:cell-dimension x="181.00" y="149.00" width="46.00" height="24.00" visible="true"/>
+      <dm:cell-format halign="center" valign="center"/>
+      <tspan x="190.65" y="166.55">end</tspan>
+    </text>
+    <line id="L_12" x1="141.0000" y1="15.0000" x2="141.0000" y2="64.6500" stroke="#000000" stroke-width="1.0"/>
+    <dm:end-arrow line="L_12" type="AM3"/>
+    <g transform="matrix(0.00, -1.00, 1.00, 0.00, 141.00, 64.65)">
+      <polygon stroke="#000000" fill="#000000" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <line id="L_13" x1="375.0000" y1="15.0000" x2="375.0000" y2="62.6500" stroke="#000000" stroke-width="1.0"/>
+    <dm:end-arrow line="L_13" type="AM3"/>
+    <g transform="matrix(0.00, -1.00, 1.00, 0.00, 375.00, 62.65)">
+      <polygon stroke="#000000" fill="#000000" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <line id="L_14" x1="537.0000" y1="161.0000" x2="537.0000" y2="128.6500" stroke="#000000" stroke-width="1.0"/>
+    <dm:end-arrow line="L_14" type="AM3"/>
+    <g transform="matrix(0.00, 1.00, -1.00, 0.00, 537.00, 128.65)">
+      <polygon stroke="#000000" fill="#000000" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <line id="L_15" x1="211.0000" y1="161.0000" x2="211.0000" y2="128.6500" stroke="#000000" stroke-width="1.0"/>
+    <dm:end-arrow line="L_15" type="AM3"/>
+    <g transform="matrix(0.00, 1.00, -1.00, 0.00, 211.00, 128.65)">
+      <polygon stroke="#000000" fill="#000000" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <line id="L_16" x1="608.0000" y1="15.0000" x2="608.0000" y2="62.6500" stroke="#000000" stroke-width="1.0"/>
+    <dm:end-arrow line="L_16" type="AM3"/>
+    <g transform="matrix(0.00, -1.00, 1.00, 0.00, 608.00, 62.65)">
+      <polygon stroke="#000000" fill="#000000" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <path id="S_0" stroke="#009900" stroke-width="1.0" fill="none" d="M 130.4398 67.0366 C 171.9616 9.9977 257.3904 10.5297 298.2334 67.9757 "/>
+    <dm:start-arrow path="S_0" type="AM3"/>
+    <g transform="matrix(0.59, -0.81, 0.81, 0.59, 130.44, 67.04)">
+      <polygon stroke="#009900" fill="#009900" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <dm:end-arrow path="S_0" type="AM3"/>
+    <g transform="matrix(-0.58, -0.82, 0.82, -0.58, 298.23, 67.98)">
+      <polygon stroke="#009900" fill="#009900" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <path id="S_1" stroke="#ff0000" stroke-width="1.0" stroke-dasharray="5.0, 3.0" fill="none" d="M 450.4398 67.0366 C 491.9616 9.9977 577.3904 10.5297 618.2334 67.9757 "/>
+    <dm:start-arrow path="S_1" type="AM3"/>
+    <g transform="matrix(0.59, -0.81, 0.81, 0.59, 450.44, 67.04)">
+      <polygon stroke="#ff0000" fill="#ff0000" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <dm:end-arrow path="S_1" type="AM3"/>
+    <g transform="matrix(-0.58, -0.82, 0.82, -0.58, 618.23, 67.98)">
+      <polygon stroke="#ff0000" fill="#ff0000" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <path id="S_2" stroke="#009900" stroke-width="1.0" fill="none" d="M 302.1383 67.8977 C 345.5722 16.2621 415.5668 28.4256 447.0279 66.8952 "/>
+    <dm:start-arrow path="S_2" type="AM3"/>
+    <g transform="matrix(0.64, -0.77, 0.77, 0.64, 302.14, 67.90)">
+      <polygon stroke="#009900" fill="#009900" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <dm:end-arrow path="S_2" type="AM3"/>
+    <g transform="matrix(-0.63, -0.77, 0.77, -0.63, 447.03, 66.90)">
+      <polygon stroke="#009900" fill="#009900" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <line id="L_17" x1="128.0000" y1="67.6500" x2="128.0000" y2="87.6500" stroke="#000000" stroke-width="1.0" stroke-dasharray="5.0, 3.0"/>
+    <line id="L_18" x1="296.3673" y1="67.6500" x2="296.3673" y2="87.6500" stroke="#000000" stroke-width="1.0" stroke-dasharray="5.0, 3.0"/>
+    <line id="L_19" x1="304.3673" y1="67.6500" x2="304.3673" y2="87.6500" stroke="#000000" stroke-width="1.0" stroke-dasharray="5.0, 3.0"/>
+    <line id="L_20" x1="445.0204" y1="67.6500" x2="445.0204" y2="87.6500" stroke="#000000" stroke-width="1.0" stroke-dasharray="5.0, 3.0"/>
+    <line id="L_21" x1="453.0204" y1="67.6500" x2="453.0204" y2="87.6500" stroke="#000000" stroke-width="1.0" stroke-dasharray="5.0, 3.0"/>
+    <line id="L_22" x1="620.0000" y1="67.6500" x2="620.0000" y2="87.6500" stroke="#000000" stroke-width="1.0" stroke-dasharray="5.0, 3.0"/>
+    <polyline id="L_23" stroke="#000000" stroke-width="1.0" fill="none" points="49.0000 123.6500 49.0000 103.6500 762.0000 103.6500 762.0000 123.6500"/>
+    <line id="L_24" x1="49.0000" y1="123.6500" x2="762.0000" y2="123.6500" stroke="#000000" stroke-width="1.0"/>
+    <text id="C_6" font-family="Arial" font-size="16" fill="#000000" transform="matrix(1.00, 0.00, 0.00, 1.00, -1.00, 16.65)">
+      <dm:cell-dimension x="16.00" y="84.00" width="36.00" height="27.00" visible="true"/>
+      <dm:cell-format halign="center" valign="center"/>
+      <tspan x="24.44" y="103.05">r =</tspan>
+    </text>
+    <line id="L_25" x1="370.0000" y1="103.6500" x2="370.0000" y2="123.6500" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_26" x1="378.0000" y1="103.6500" x2="378.0000" y2="123.6500" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_31" x1="207.0000" y1="103.6500" x2="207.0000" y2="123.6500" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_32" x1="215.0000" y1="103.6500" x2="215.0000" y2="123.6500" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_33" x1="533.0000" y1="103.6500" x2="533.0000" y2="123.6500" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_34" x1="541.0000" y1="103.6500" x2="541.0000" y2="123.6500" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_42" x1="378.0000" y1="87.6500" x2="378.0000" y2="103.6500" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_44" x1="612.0000" y1="87.6500" x2="612.0000" y2="161.0000" stroke="#000000" stroke-width="1.0"/>
+    <polyline id="L_46" stroke="#000000" stroke-width="1.0" fill="#000000" fill-opacity="0.19" points="49.0000 103.6500 533.0000 103.6500 533.0000 123.6500 49.0000 123.6500"/>
+    <dm:point id="P_0" x="49.0000" y="67.6500" visible="true"/>
+    <dm:point id="P_1" x="762.0000" y="67.6500" visible="true"/>
+    <dm:point id="P_2" x="49.0000" y="87.6500" visible="true"/>
+    <dm:point id="P_3" x="762.0000" y="87.6500" visible="true"/>
+    <dm:point id="P_4" x="370.0000" y="67.6500" visible="true"/>
+    <dm:point id="P_5" x="370.0000" y="87.6500" visible="true"/>
+    <dm:point id="P_6" x="378.0000" y="67.6500" visible="true"/>
+    <dm:point id="P_7" x="378.0000" y="87.6500" visible="true"/>
+    <dm:point id="P_8" x="604.0000" y="67.6500" visible="true"/>
+    <dm:point id="P_9" x="604.0000" y="87.6500" visible="true"/>
+    <dm:point id="P_10" x="612.0000" y="67.6500" visible="true"/>
+    <dm:point id="P_11" x="612.0000" y="87.6500" visible="true"/>
+    <dm:point id="P_12" x="136.0000" y="67.6500" visible="true"/>
+    <dm:point id="P_13" x="136.0000" y="87.6500" visible="true"/>
+    <dm:point id="P_14" x="144.0000" y="67.6500" visible="true"/>
+    <dm:point id="P_15" x="144.0000" y="87.6500" visible="true"/>
+    <dm:point id="P_24" x="141.0000" y="15.0000" visible="true"/>
+    <dm:point id="P_25" x="141.0000" y="64.6500" visible="true"/>
+    <dm:point id="P_26" x="375.0000" y="62.6500" visible="true"/>
+    <dm:point id="P_27" x="375.0000" y="15.0000" visible="true"/>
+    <dm:point id="P_28" x="537.0000" y="128.6500" visible="true"/>
+    <dm:point id="P_29" x="537.0000" y="161.0000" visible="true"/>
+    <dm:point id="P_30" x="211.0000" y="128.6500" visible="true"/>
+    <dm:point id="P_31" x="211.0000" y="161.0000" visible="true"/>
+    <dm:point id="P_32" x="608.0000" y="62.6500" visible="true"/>
+    <dm:point id="P_33" x="608.0000" y="15.0000" visible="true"/>
+    <dm:point id="P_34" x="128.0000" y="67.6500" visible="true"/>
+    <dm:point id="P_35" x="128.0000" y="87.6500" visible="true"/>
+    <dm:point id="P_37" x="296.3673" y="67.6500" visible="true"/>
+    <dm:point id="P_38" x="296.3673" y="87.6500" visible="true"/>
+    <dm:point id="P_39" x="304.3673" y="67.6500" visible="true"/>
+    <dm:point id="P_40" x="304.3673" y="87.6500" visible="true"/>
+    <dm:point id="P_41" x="445.0204" y="67.6500" visible="true"/>
+    <dm:point id="P_42" x="445.0204" y="87.6500" visible="true"/>
+    <dm:point id="P_43" x="453.0204" y="67.6500" visible="true"/>
+    <dm:point id="P_44" x="453.0204" y="87.6500" visible="true"/>
+    <dm:point id="P_45" x="612.0000" y="87.6500" visible="true"/>
+    <dm:point id="P_46" x="620.0000" y="67.6500" visible="true"/>
+    <dm:point id="P_47" x="620.0000" y="87.6500" visible="true"/>
+    <dm:point id="P_48" x="49.0000" y="103.6500" visible="true"/>
+    <dm:point id="P_49" x="762.0000" y="103.6500" visible="true"/>
+    <dm:point id="P_50" x="49.0000" y="123.6500" visible="true"/>
+    <dm:point id="P_51" x="762.0000" y="123.6500" visible="true"/>
+    <dm:point id="P_52" x="370.0000" y="103.6500" visible="true"/>
+    <dm:point id="P_53" x="370.0000" y="123.6500" visible="true"/>
+    <dm:point id="P_54" x="378.0000" y="103.6500" visible="true"/>
+    <dm:point id="P_55" x="378.0000" y="123.6500" visible="true"/>
+    <dm:point id="P_64" x="207.0000" y="103.6500" visible="true"/>
+    <dm:point id="P_65" x="207.0000" y="123.6500" visible="true"/>
+    <dm:point id="P_66" x="215.0000" y="103.6500" visible="true"/>
+    <dm:point id="P_67" x="215.0000" y="123.6500" visible="true"/>
+    <dm:point id="P_68" x="533.0000" y="103.6500" visible="true"/>
+    <dm:point id="P_69" x="533.0000" y="123.6500" visible="true"/>
+    <dm:point id="P_70" x="541.0000" y="103.6500" visible="true"/>
+    <dm:point id="P_71" x="541.0000" y="123.6500" visible="true"/>
+    <dm:point id="P_99" x="136.0000" y="161.0000" visible="true"/>
+    <dm:point id="P_100" x="612.0000" y="161.0000" visible="true"/>
+  </g>
+  <dm:constraint dm:target="P_1" dm:constraint-text="=horizontal(P_0)"/>
+  <dm:constraint dm:target="P_4" dm:constraint-text="=colinear(P_0,P_1)"/>
+  <dm:constraint dm:target="P_8" dm:constraint-text="=colinear(P_0,P_1)"/>
+  <dm:constraint dm:target="P_25" dm:constraint-text="=vertical(P_24)"/>
+  <dm:constraint dm:target="L_12" dm:constraint-text="=vertices(P_24, P_25)"/>
+  <dm:constraint dm:target="P_26" dm:constraint-text="=vertical(P_27)"/>
+  <dm:constraint dm:target="L_13" dm:constraint-text="=vertices(P_27, P_26)"/>
+  <dm:constraint dm:target="P_29" dm:constraint-text="=horizontal(P_31)"/>
+  <dm:constraint dm:target="P_30" dm:constraint-text="=vertical(P_31)"/>
+  <dm:constraint dm:target="L_15" dm:constraint-text="=vertices(P_31, P_30)"/>
+  <dm:constraint dm:target="P_28" dm:constraint-text="=vertical(P_29) and horizontal(P_30)"/>
+  <dm:constraint dm:target="L_14" dm:constraint-text="=vertices(P_29, P_28)"/>
+  <dm:constraint dm:target="P_32" dm:constraint-text="=vertical(P_33)"/>
+  <dm:constraint dm:target="L_16" dm:constraint-text="=vertices(P_33, P_32)"/>
+  <dm:constraint dm:target="P_37" dm:constraint-text="=colinear(P_0,P_1)"/>
+  <dm:constraint dm:target="P_41" dm:constraint-text="=colinear(P_0,P_1)"/>
+  <dm:constraint dm:target="P_48" dm:constraint-text="=vertical(P_0)"/>
+  <dm:constraint dm:target="P_49" dm:constraint-text="=horizontal(P_48) and vertical(P_1)"/>
+  <dm:constraint dm:target="P_52" dm:constraint-text="=colinear(P_48,P_49) and vertical(P_4)"/>
+  <dm:constraint dm:target="P_68" dm:constraint-text="=horizontal(P_48)"/>
+  <dm:constraint dm:target="P_6" dm:constraint-text="=horizontal(P_4) and hdistance(P_4,8.0)"/>
+  <dm:constraint dm:target="P_10" dm:constraint-text="=horizontal(P_8) and hdistance(P_8,8.0)"/>
+  <dm:constraint dm:target="P_12" dm:constraint-text="=horizontal(P_0) and hdistance(P_4,hdistance(P_10,P_6))"/>
+  <dm:constraint dm:target="P_14" dm:constraint-text="=horizontal(P_12) and hdistance(P_12,8.0)"/>
+  <dm:constraint dm:target="P_39" dm:constraint-text="=horizontal(P_37) and hdistance(P_37,8.0)"/>
+  <dm:constraint dm:target="P_43" dm:constraint-text="=horizontal(P_41) and hdistance(P_41,8.0)"/>
+  <dm:constraint dm:target="P_46" dm:constraint-text="=horizontal(P_10) and hdistance(P_10,8.0)"/>
+  <dm:constraint dm:target="P_54" dm:constraint-text="=horizontal(P_52) and hdistance(P_52,8.0)"/>
+  <dm:constraint dm:target="P_70" dm:constraint-text="=horizontal(P_68) and hdistance(P_68,8.0)"/>
+  <dm:constraint dm:target="P_64" dm:constraint-text="=horizontal(P_48) and hdistance(P_52,hdistance(P_70,P_54))"/>
+  <dm:constraint dm:target="P_66" dm:constraint-text="=horizontal(P_64) and hdistance(P_64,8.0)"/>
+  <dm:constraint dm:target="P_2" dm:constraint-text="=vertical(P_0) and vdistance(P_0, -20.0)"/>
+  <dm:constraint dm:target="P_3" dm:constraint-text="=horizontal(P_2) and vertical(P_1)"/>
+  <dm:constraint dm:target="L_1" dm:constraint-text="=vertices(P_2, P_3)"/>
+  <dm:constraint dm:target="L_0" dm:constraint-text="=vertices(P_2, P_0, P_1, P_3)"/>
+  <dm:constraint dm:target="P_5" dm:constraint-text="=vertical(P_4) and vdistance(P_4, -20.0)"/>
+  <dm:constraint dm:target="L_2" dm:constraint-text="=vertices(P_4, P_5)"/>
+  <dm:constraint dm:target="P_7" dm:constraint-text="=vertical(P_6) and horizontal(P_5)"/>
+  <dm:constraint dm:target="L_42" dm:constraint-text="=vertices(P_7, P_54)"/>
+  <dm:constraint dm:target="L_3" dm:constraint-text="=vertices(P_6, P_7)"/>
+  <dm:constraint dm:target="P_9" dm:constraint-text="=vertical(P_8) and vdistance(P_8, -20.0)"/>
+  <dm:constraint dm:target="L_4" dm:constraint-text="=vertices(P_8, P_9)"/>
+  <dm:constraint dm:target="P_11" dm:constraint-text="=vertical(P_10) and horizontal(P_9)"/>
+  <dm:constraint dm:target="L_5" dm:constraint-text="=vertices(P_10, P_11)"/>
+  <dm:constraint dm:target="P_13" dm:constraint-text="=vertical(P_12) and vdistance(P_12, -20.0)"/>
+  <dm:constraint dm:target="P_15" dm:constraint-text="=vertical(P_14) and horizontal(P_13)"/>
+  <dm:constraint dm:target="P_99" dm:constraint-text="=vertical(P_13)"/>
+  <dm:constraint dm:target="L_7" dm:constraint-text="=vertices(P_14, P_15)"/>
+  <dm:constraint dm:target="L_6" dm:constraint-text="=vertices(P_12, P_13, P_99)"/>
+  <dm:constraint dm:target="P_34" dm:constraint-text="=horizontal(P_12) and hdistance(P_12, -8.0)"/>
+  <dm:constraint dm:target="P_35" dm:constraint-text="=vertical(P_34) and colinear(P_2,P_3)"/>
+  <dm:constraint dm:target="L_17" dm:constraint-text="=vertices(P_34, P_35)"/>
+  <dm:constraint dm:target="P_38" dm:constraint-text="=vertical(P_37) and vdistance(P_37, -20.0)"/>
+  <dm:constraint dm:target="L_18" dm:constraint-text="=vertices(P_37, P_38)"/>
+  <dm:constraint dm:target="P_40" dm:constraint-text="=vertical(P_39) and horizontal(P_38)"/>
+  <dm:constraint dm:target="L_19" dm:constraint-text="=vertices(P_39, P_40)"/>
+  <dm:constraint dm:target="P_42" dm:constraint-text="=vertical(P_41) and vdistance(P_41, -20.0)"/>
+  <dm:constraint dm:target="L_20" dm:constraint-text="=vertices(P_41, P_42)"/>
+  <dm:constraint dm:target="P_44" dm:constraint-text="=vertical(P_43) and horizontal(P_42)"/>
+  <dm:constraint dm:target="L_21" dm:constraint-text="=vertices(P_43, P_44)"/>
+  <dm:constraint dm:target="P_45" dm:constraint-text="=vertical(P_10) and vdistance(P_10, -20.0)"/>
+  <dm:constraint dm:target="P_47" dm:constraint-text="=vertical(P_46) and horizontal(P_45)"/>
+  <dm:constraint dm:target="P_100" dm:constraint-text="=vertical(P_45)"/>
+  <dm:constraint dm:target="L_22" dm:constraint-text="=vertices(P_46, P_47)"/>
+  <dm:constraint dm:target="L_44" dm:constraint-text="=vertices(P_45, P_100)"/>
+  <dm:constraint dm:target="P_50" dm:constraint-text="=vertical(P_48) and vdistance(P_48, -20.0)"/>
+  <dm:constraint dm:target="P_51" dm:constraint-text="=horizontal(P_50) and vertical(P_49)"/>
+  <dm:constraint dm:target="L_24" dm:constraint-text="=vertices(P_50, P_51)"/>
+  <dm:constraint dm:target="L_23" dm:constraint-text="=vertices(P_50, P_48, P_49, P_51)"/>
+  <dm:constraint dm:target="P_53" dm:constraint-text="=vertical(P_52) and vdistance(P_52, -20.0)"/>
+  <dm:constraint dm:target="L_25" dm:constraint-text="=vertices(P_52, P_53)"/>
+  <dm:constraint dm:target="P_55" dm:constraint-text="=vertical(P_54) and horizontal(P_53)"/>
+  <dm:constraint dm:target="L_26" dm:constraint-text="=vertices(P_54, P_55)"/>
+  <dm:constraint dm:target="P_65" dm:constraint-text="=vertical(P_64) and vdistance(P_64, -20.0)"/>
+  <dm:constraint dm:target="L_31" dm:constraint-text="=vertices(P_64, P_65)"/>
+  <dm:constraint dm:target="P_67" dm:constraint-text="=vertical(P_66) and horizontal(P_65)"/>
+  <dm:constraint dm:target="L_32" dm:constraint-text="=vertices(P_66, P_67)"/>
+  <dm:constraint dm:target="P_69" dm:constraint-text="=vertical(P_68) and vdistance(P_68, -20.0)"/>
+  <dm:constraint dm:target="L_33" dm:constraint-text="=vertices(P_68, P_69)"/>
+  <dm:constraint dm:target="L_46" dm:constraint-text="=vertices(P_48, P_68, P_69, P_50)"/>
+  <dm:constraint dm:target="P_71" dm:constraint-text="=vertical(P_70) and horizontal(P_69)"/>
+  <dm:constraint dm:target="L_34" dm:constraint-text="=vertices(P_70, P_71)"/>
+</svg>

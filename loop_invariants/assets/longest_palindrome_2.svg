@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Created with Drawmetry (http://www.drawmetry.com/)--><svg xmlns="http://www.w3.org/2000/svg" width="774.00" height="165.65" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dm="http://www.drawmetry.com">
+  <defs/>
+  <g transform="translate(-71.00, -57.35)">
+    <polyline id="L_0" stroke="#000000" stroke-width="1.0" fill="none" points="120.0000 145.0000 120.0000 125.0000 833.0000 125.0000 833.0000 145.0000"/>
+    <line id="L_1" x1="120.0000" y1="145.0000" x2="833.0000" y2="145.0000" stroke="#000000" stroke-width="1.0"/>
+    <text id="C_0" font-family="Arial" font-size="16" fill="#000000" transform="matrix(1.00, 0.00, 0.00, 1.00, 65.00, 38.00)">
+      <tspan x="23.11" y="103.05">s =</tspan>
+    </text>
+    <line id="L_2" x1="441.0000" y1="125.0000" x2="441.0000" y2="145.0000" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_3" x1="449.0000" y1="125.0000" x2="449.0000" y2="145.0000" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_4" x1="675.0000" y1="125.0000" x2="675.0000" y2="145.0000" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_5" x1="683.0000" y1="125.0000" x2="683.0000" y2="145.0000" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_6" x1="207.0000" y1="125.0000" x2="207.0000" y2="145.0000" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_7" x1="215.0000" y1="125.0000" x2="215.0000" y2="145.0000" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_8" x1="283.0000" y1="125.0000" x2="283.0000" y2="145.0000" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_9" x1="291.0000" y1="125.0000" x2="291.0000" y2="145.0000" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_10" x1="599.0000" y1="125.0000" x2="599.0000" y2="145.0000" stroke="#000000" stroke-width="1.0"/>
+    <line id="L_11" x1="607.0000" y1="125.0000" x2="607.0000" y2="145.0000" stroke="#000000" stroke-width="1.0"/>
+    <text id="C_1" font-family="Arial" font-size="16" fill="#000000" transform="matrix(1.00, 0.00, 0.00, 1.00, 10.00, 38.00)">
+      <tspan x="188.44" y="166.55">start</tspan>
+    </text>
+    <text id="C_2" font-family="Arial" font-size="16" fill="#000000" transform="matrix(1.00, 0.00, 0.00, 1.00, 84.00, 38.00)">
+      <tspan x="202.22" y="166.55">i</tspan>
+    </text>
+    <text id="C_3" font-family="Arial" font-size="16" fill="#000000" transform="matrix(1.00, 0.00, 0.00, 1.00, 240.00, 40.00)">
+      <tspan x="195.11" y="166.55">ctr</tspan>
+    </text>
+    <text id="C_4" font-family="Arial" font-size="16" fill="#000000" transform="matrix(1.00, 0.00, 0.00, 1.00, 400.00, 39.00)">
+      <tspan x="202.22" y="166.55">j</tspan>
+    </text>
+    <text id="C_5" font-family="Arial" font-size="16" fill="#000000" transform="matrix(1.00, 0.00, 0.00, 1.00, 478.00, 39.00)">
+      <tspan x="190.65" y="166.55">end</tspan>
+    </text>
+    <line id="L_12" x1="211.0000" y1="183.0000" x2="211.0000" y2="151.0000" stroke="#000000" stroke-width="1.0"/>
+    <g transform="matrix(0.00, 1.00, -1.00, 0.00, 211.00, 151.00)">
+      <polygon stroke="#000000" fill="#000000" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <line id="L_13" x1="444.0000" y1="182.0000" x2="444.0000" y2="150.0000" stroke="#000000" stroke-width="1.0"/>
+    <g transform="matrix(0.00, 1.00, -1.00, 0.00, 444.00, 150.00)">
+      <polygon stroke="#000000" fill="#000000" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <line id="L_14" x1="603.0000" y1="183.0000" x2="603.0000" y2="151.0000" stroke="#000000" stroke-width="1.0"/>
+    <g transform="matrix(0.00, 1.00, -1.00, 0.00, 603.00, 151.00)">
+      <polygon stroke="#000000" fill="#000000" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <line id="L_15" x1="287.0000" y1="182.0000" x2="287.0000" y2="150.0000" stroke="#000000" stroke-width="1.0"/>
+    <g transform="matrix(0.00, 1.00, -1.00, 0.00, 287.00, 150.00)">
+      <polygon stroke="#000000" fill="#000000" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <line id="L_16" x1="680.0000" y1="183.0000" x2="680.0000" y2="151.0000" stroke="#000000" stroke-width="1.0"/>
+    <g transform="matrix(0.00, 1.00, -1.00, 0.00, 680.00, 151.00)">
+      <polygon stroke="#000000" fill="#000000" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <path id="S_0" stroke="#009900" stroke-width="1.0" fill="none" d="M 201.4398 124.3866 C 242.9616 67.3477 328.3904 67.8797 369.2334 125.3257 "/>
+    <g transform="matrix(0.59, -0.81, 0.81, 0.59, 201.44, 124.39)">
+      <polygon stroke="#009900" fill="#009900" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <g transform="matrix(-0.58, -0.82, 0.82, -0.58, 369.23, 125.33)">
+      <polygon stroke="#009900" fill="#009900" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <path id="S_1" stroke="#009900" stroke-width="1.0" fill="none" d="M 521.4398 124.3866 C 562.9616 67.3477 648.3904 67.8797 689.2334 125.3257 "/>
+    <g transform="matrix(0.59, -0.81, 0.81, 0.59, 521.44, 124.39)">
+      <polygon stroke="#009900" fill="#009900" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <g transform="matrix(-0.58, -0.82, 0.82, -0.58, 689.23, 125.33)">
+      <polygon stroke="#009900" fill="#009900" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <path id="S_2" stroke="#009900" stroke-width="1.0" fill="none" d="M 373.1383 125.2477 C 416.5722 73.6121 486.5668 85.7756 518.0279 124.2452 "/>
+    <g transform="matrix(0.64, -0.77, 0.77, 0.64, 373.14, 125.25)">
+      <polygon stroke="#009900" fill="#009900" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <g transform="matrix(-0.63, -0.77, 0.77, -0.63, 518.03, 124.25)">
+      <polygon stroke="#009900" fill="#009900" points="10,5 0,0 10,-5 9,0 "/>
+    </g>
+    <line id="L_18" x1="199.0000" y1="125.0000" x2="199.0000" y2="145.0000" stroke="#000000" stroke-width="1.0" stroke-dasharray="5.0, 3.0"/>
+    <line id="L_19" x1="367.3673" y1="125.0000" x2="367.3673" y2="145.0000" stroke="#000000" stroke-width="1.0" stroke-dasharray="5.0, 3.0"/>
+    <line id="L_20" x1="375.3673" y1="125.0000" x2="375.3673" y2="145.0000" stroke="#000000" stroke-width="1.0" stroke-dasharray="5.0, 3.0"/>
+    <line id="L_21" x1="516.0204" y1="125.0000" x2="516.0204" y2="145.0000" stroke="#000000" stroke-width="1.0" stroke-dasharray="5.0, 3.0"/>
+    <line id="L_22" x1="524.0204" y1="125.0000" x2="524.0204" y2="145.0000" stroke="#000000" stroke-width="1.0" stroke-dasharray="5.0, 3.0"/>
+    <line id="L_24" x1="691.0000" y1="125.0000" x2="691.0000" y2="145.0000" stroke="#000000" stroke-width="1.0" stroke-dasharray="5.0, 3.0"/>
+  </g>
+</svg>

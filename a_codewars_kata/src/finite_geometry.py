@@ -1,7 +1,6 @@
+from fractions import Fraction
 from itertools import chain
 from math import gcd
-
-from src.utils import log
 
 
 class SvgTemplate(object):
@@ -19,11 +18,14 @@ class SvgTemplate(object):
                          f'{self._margin} {self.height - self._margin}"/>'
 
     def add_segments(self, segments, stroke):
+        def to_float(x):
+            return float(Fraction(x))
+
         for x1, y1, x2, y2 in segments:
-            yield f'<line x1="{round(self._margin + x1 * self._unit, 2)}"' \
-                  f' y1="{round(self._margin + (self._p - y1) * self._unit, 2)}"' \
-                  f' x2="{round(self._margin + x2 * self._unit, 2)}"' \
-                  f' y2="{round(self._margin + (self._p - y2) * self._unit, 2)}"' \
+            yield f'<line x1="{round(self._margin + to_float(x1) * self._unit, 2)}"' \
+                  f' y1="{round(self._margin + (self._p - to_float(y1)) * self._unit, 2)}"' \
+                  f' x2="{round(self._margin + to_float(x2) * self._unit, 2)}"' \
+                  f' y2="{round(self._margin + (self._p - to_float(y2)) * self._unit, 2)}"' \
                   f' stroke="{stroke}"/>'
 
     def make_svg(self, out_file, contents):
@@ -56,9 +58,9 @@ def make_finite_geom_svg():
 
     template = SvgTemplate(p, margin=margin, unit=unit)
     contents = chain(
-        template.add_segments(log('yellow')(get_segments)(*translate(3, -1, -2), p), stroke='#ffff00'),
-        template.add_segments(log('cyan')(get_segments)(*translate(2, -3, -6), p), stroke='#00ffff'),
-        template.add_segments(log('magenta')(get_segments)(*translate(1, 2, -3), p), stroke='#ff00ff'),
+        template.add_segments(segments(*translate(3, -1, -2), p), stroke='#ffff00'),
+        template.add_segments(segments(*translate(2, -3, -6), p), stroke='#00ffff'),
+        template.add_segments(segments(*translate(1, 2, -3), p), stroke='#ff00ff'),
         add_points())
     template.make_svg('../assets/finite_geometry.svg', contents)
 
@@ -68,13 +70,14 @@ def make_test_svg():
     margin, unit = 10, 30
     template = SvgTemplate(p, margin=margin, unit=unit)
     contents = chain(
-        template.add_segments(log('yellow')(get_segments)(2, -1, 0, p=p), stroke='#ffff00'),
-        template.add_segments(log('cyan')(get_segments)(3, 4, 0, p=p), stroke='#00ffff'))
+        template.add_segments(segments(2, -1, 0, p), stroke='#ffff00'),
+        template.add_segments(segments(3, 4, 0, p), stroke='#00ffff'))
     template.make_svg('../assets/fg.svg', contents)
 
 
-def get_segments(a, b, c, m):
-    """a and be are non-zero ints, c is a float, m is a positive float"""
+def segments(a, b, c, m):
+    """a and be are non-zero ints, c is a Fraction, m is a positive Fraction"""
+    c, m = Fraction(c), Fraction(m)
     if a < 0:
         a, b, c = -a, -b, -c
     d = gcd(a, b)
@@ -86,24 +89,16 @@ def get_segments(a, b, c, m):
     b, flipped = abs(b), b < 0
     c = c % -m  # -m < c <= 0
 
-    pts = [(x * m, (-a * x * m - c) / b) for x in range(b + 1)]
-    pts += [((b * -y * m + c) / -a, -y * m) for y in range(a)]
-    pts.sort()
+    pts = sorted({(x * m, (-a * x * m - c) / b) for x in range(b + 1)} \
+                 | {((b * -y * m + c) / -a, -y * m) for y in range(a)})
     res = []
-    epsilon = 1e-3
     for (x1, y1), (x2, y2) in zip(pts, pts[1:]):
-        if (x1 - x2) ** 2 + (y1 - y2) ** 2 < 0.09:
-            # if the length of a segment is less than 0.3, skip it.
-            continue
-        x1 = 0 if abs(x1 % m - m) < epsilon else x1 % m
-        y1 = m if abs(y1 % m) < epsilon else y1 % m
-        x2 = m if abs(x2 % m) < epsilon else x2 % m
-        y2 = 0 if abs(y2 % m - m) < epsilon else y2 % m
+        x1, y1, x2, y2 = x1 % m, y1 % -m + m, x2 % -m + m, y2 % m
         seg = (x1, m - y1, x2, m - y2) if flipped else (x1, y1, x2, y2)
-        res.append(tuple(round(coord, 2) for coord in seg))
+        res.append(tuple(str(coord) for coord in seg))
     return res
 
 
 if __name__ == "__main__":
-    # make_test_svg()
-    make_finite_geom_svg()
+    make_test_svg()
+    # make_finite_geom_svg()

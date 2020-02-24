@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?> <svg xmlns="http://www.w3.org/2000/svg" width="380" height="380">
 <polygon stroke="none" fill="#000000" points="0 0 380 0 380 380 0 380"/>
 <polygon stroke="#ffffff" fill="none" points="10 10 370 10 370 370 10 370"/>
-<line x1="10.0" y1="370" x2="190.0" y2="10" stroke="#ffff00"/>
-<line x1="190.0" y1="370" x2="370" y2="10.0" stroke="#ffff00"/>
-<line x1="10.0" y1="10" x2="370" y2="280.0" stroke="#00ffff"/>
-<line x1="10" y1="280.0" x2="130.0" y2="370" stroke="#00ffff"/>
-<line x1="130.0" y1="10" x2="370" y2="190.0" stroke="#00ffff"/>
-<line x1="10" y1="190.0" x2="250.0" y2="370" stroke="#00ffff"/>
-<line x1="250.0" y1="10" x2="370" y2="100.0" stroke="#00ffff"/>
-<line x1="10" y1="100.0" x2="370" y2="370.0" stroke="#00ffff"/>
+<line x1="10.0" y1="370.0" x2="190.0" y2="10.0" stroke="#ffff00"/>
+<line x1="190.0" y1="370.0" x2="370.0" y2="10.0" stroke="#ffff00"/>
+<line x1="10.0" y1="10.0" x2="370.0" y2="280.0" stroke="#00ffff"/>
+<line x1="10.0" y1="280.0" x2="130.0" y2="370.0" stroke="#00ffff"/>
+<line x1="130.0" y1="10.0" x2="370.0" y2="190.0" stroke="#00ffff"/>
+<line x1="10.0" y1="190.0" x2="250.0" y2="370.0" stroke="#00ffff"/>
+<line x1="250.0" y1="10.0" x2="370.0" y2="100.0" stroke="#00ffff"/>
+<line x1="10.0" y1="100.0" x2="370.0" y2="370.0" stroke="#00ffff"/>
 </svg>
