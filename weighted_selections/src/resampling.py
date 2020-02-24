@@ -4,9 +4,7 @@ from random import choices, gauss, uniform
 import matplotlib.pyplot as plt
 import numpy as np
 
-from ..src.timethis import timeblock, timethis
-
-
+from SD_Python_meetup_20171026.src.timethis import timethis, timeblock
 # In Python 3.6: random.choices(samples, weights, k = 1)
 
 def numpy_choices(samples, weights, k=1):
@@ -79,6 +77,7 @@ def show_exponential_sum_dist(sample_size, bins):
         for _ in range(sample_size):
             e += -log(uniform(0, 1))
             yield e
+
     plt.hist([w for w in gen_events()], bins)
     plt.show()
 
@@ -128,7 +127,6 @@ def theoretically(mu_0, sigma_0, mu_1, sigma_1):
 
 
 def compare_particle_filter_step(num_samples):
-
     print("\nThe theoretical result")
     print("======================")
     print("μ' = %.2f, σ' = %.2f" % theoretically(5.2, 6.5, 2.6, 3.5))
@@ -150,3 +148,7 @@ def compare_particle_filter_step(num_samples):
     print("\nRun test using my_choices_fast")
     print("==============================")
     particle_filter_step(samples_pre, resampling=my_choices_fast)
+
+
+if __name__ == "__main__":
+    compare_particle_filter_step(100000)
