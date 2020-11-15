@@ -9,6 +9,7 @@ verify_ssl = true
 matplotlib = "*"
 pyperclip = "*"
 jupyter = "*"
+notebook = ">=6.1.5"
 timethis = "*"
 nbdev = "*"
 

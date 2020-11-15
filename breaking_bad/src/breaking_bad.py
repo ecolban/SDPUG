@@ -1,3 +1,4 @@
+import os
 from collections import deque
 from dataclasses import dataclass
 from random import randrange, choice
@@ -23,7 +24,8 @@ class TreeNode:
 
 
 def make_random_tree(height):
-    with open('words.txt', 'r') as f:
+    d = os.path.dirname(__file__)
+    with open(os.path.join(d, '..', 'assets', 'words.txt'), 'r') as f:
         word_list = [word.strip() for word in f]
     if height <= 1: return TreeNode(choice(word_list), ())
     return TreeNode(choice(word_list),
@@ -47,16 +49,3 @@ def breadth_first_walk(tree):
         node = q.popleft()
         yield node.root
         q.extend(node.children)
-
-
-def process_data(_chunk):
-    pass
-
-
-if __name__ == '__main__':
-    tree = make_random_tree(4)
-    print(tree)
-    first_vowel = next((x for x in breadth_first_walk(tree) if x[0] in 'aeiou'), None)
-    contains_a = any('a' in x for x in breadth_first_walk(tree))
-    num_nodes = sum(1 for _ in breadth_first_walk(tree))
-    print(first_vowel, contains_a, num_nodes)
