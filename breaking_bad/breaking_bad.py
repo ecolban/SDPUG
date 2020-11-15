@@ -1,3 +1,4 @@
+import json
 from collections import deque
 from dataclasses import dataclass
 from random import randrange, choice
@@ -20,6 +21,27 @@ class TreeNode:
                     yield ('    ' if last else '│   ') + line
 
         return '\n'.join(h(self))
+
+
+def json_tree(root, children):
+    yield ('' if isinstance(root, str) else ' ') + json.dumps(root)
+    if children is None: return
+    if isinstance(children, dict):
+        for i, (k, v) in enumerate(children.items()):
+            last = i == len(children) - 1
+            yield from prepend_lines(json_tree(k, v), last)
+    elif isinstance(children, list):
+        for i, v in enumerate(children):
+            last = i == len(children) - 1
+            yield from prepend_lines(json_tree(i, v), last)
+    else:
+        yield ' └──' + ('' if isinstance(children, str) else ' ') + json.dumps(children)
+
+
+def prepend_lines(line_iterator, last):
+    yield (' └──' if last else ' ├──') + next(line_iterator)
+    for line in line_iterator:
+        yield ('    ' if last else ' │  ') + line
 
 
 def make_random_tree(height):
@@ -54,9 +76,16 @@ def process_data(_chunk):
 
 
 if __name__ == '__main__':
-    tree = make_random_tree(4)
-    print(tree)
-    first_vowel = next((x for x in breadth_first_walk(tree) if x[0] in 'aeiou'), None)
-    contains_a = any('a' in x for x in breadth_first_walk(tree))
-    num_nodes = sum(1 for _ in breadth_first_walk(tree))
-    print(first_vowel, contains_a, num_nodes)
+    abc_ = {
+        'a_lo....ooong_key': {
+            '0': True},
+        'bb': [
+            101,
+            "true",
+            False],
+        'ccc': 1.2,
+        'dddd': 10,
+        'eeeee': 'ABC'
+    }
+    print('\n'.join(json_tree('*', abc_)))
+    print(json.dumps(abc_, indent=2))
