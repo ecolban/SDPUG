@@ -1,64 +1,72 @@
-from unittest import TestCase
+from pathlib import Path
 
-from on_itertools_groupby.src.sales_report import *
+import pytest
+import sys
 
-records = [Record(*line.split(',')) for line in ['0001,001,12',
-                                                 '0012,001,1000',
-                                                 '0012,001,32',
-                                                 '0009,007,207',
-                                                 '0112,007,12119',
-                                                 '1009,007,200']]
+SRC_DIR = Path(__file__).parent.parent / 'src'
+sys.path.append(str(SRC_DIR))
+
+from sales_report import *
+
+records = [
+    Record('0001', '001', '12'),
+    Record('0012', '001', '1000'),
+    Record('0012', '001', '32'),
+    Record('0009', '007', '207'),
+    Record('0112', '007', '12119'),
+    Record('1009', '007', '200'),
+]
 
 
-class TestSalesReport(TestCase):
+class TestSalesReport:
 
     def test_process_product(self):
-        prod = process_product('0001', records[:1])
-        self.assertEqual('    Product: 0001 Value:     12',           next(prod))
-        with self.assertRaises(StopIteration) as context_manager:
+        prod = process_product('0001', iter(records[:1]))
+        assert next(prod) == '    Product: 0001 Value:     12'
+        with pytest.raises(StopIteration) as e_info:
             next(prod)
-        self.assertEqual(12, context_manager.exception.value)
+        assert e_info.value.value == 12
 
         prod = process_product('0012', records[1:3])
-        self.assertEqual('    Product: 0012 Value:   1032',           next(prod))
-        with self.assertRaises(StopIteration) as context_manager:
+        assert next(prod) == '    Product: 0012 Value:   1032'
+        with pytest.raises(StopIteration) as e_info:
             next(prod)
-        self.assertEqual(1032, context_manager.exception.value)
+        assert e_info.value.value == 1032
 
     def test_process_product_group(self):
-        prod_group = process_product_group('001', records[:3])
-        self.assertEqual('Group: 001',                                next(prod_group))
-        self.assertEqual('    Product: 0001 Value:     12',           next(prod_group))
-        self.assertEqual('    Product: 0012 Value:   1032',           next(prod_group))
-        self.assertEqual('    Group total:                  1044',    next(prod_group))
-        self.assertEqual('',                                          next(prod_group))
-        with self.assertRaises(StopIteration) as context_manager:
+        prod_group = process_product_group('001', iter(records[:3]))
+        assert next(prod_group) == 'Group: 001'
+        assert next(prod_group) == '    Product: 0001 Value:     12'
+        assert next(prod_group) == '    Product: 0012 Value:   1032'
+        assert next(prod_group) == '    Group total:                  1044'
+        assert next(prod_group) == ''
+        with pytest.raises(StopIteration) as e_info:
             next(prod_group)
-        self.assertEqual(1044, context_manager.exception.value)
+        assert e_info.value.value == 1044
 
-        prod_group = process_product_group('007', records[3:])
-        self.assertEqual('Group: 007', next(prod_group))
-        self.assertEqual('    Product: 0009 Value:    207',           next(prod_group))
-        self.assertEqual('    Product: 0112 Value:  12119',           next(prod_group))
-        self.assertEqual('    Product: 1009 Value:    200',           next(prod_group))
-        self.assertEqual('    Group total:                 12526',    next(prod_group))
-        self.assertEqual('',                                          next(prod_group))
-        with self.assertRaises(StopIteration) as context_manager:
+        prod_group = process_product_group('007', iter(records[3:]))
+        assert next(prod_group) == 'Group: 007'
+        assert next(prod_group) == '    Product: 0009 Value:    207'
+        assert next(prod_group) == '    Product: 0112 Value:  12119'
+        assert next(prod_group) == '    Product: 1009 Value:    200'
+        assert next(prod_group) == '    Group total:                 12526'
+        assert next(prod_group) == ''
+        with pytest.raises(StopIteration) as e_info:
             next(prod_group)
-        self.assertEqual(12526, context_manager.exception.value)
+        assert e_info.value.value == 12526
 
     def test_generate_report(self):
-        report = generate_report(records)
-        self.assertEqual('Group: 001',                                next(report))
-        self.assertEqual('    Product: 0001 Value:     12',           next(report))
-        self.assertEqual('    Product: 0012 Value:   1032',           next(report))
-        self.assertEqual('    Group total:                  1044',    next(report))
-        self.assertEqual('',                                          next(report))
-        self.assertEqual('Group: 007',                                next(report))
-        self.assertEqual('    Product: 0009 Value:    207',           next(report))
-        self.assertEqual('    Product: 0112 Value:  12119',           next(report))
-        self.assertEqual('    Product: 1009 Value:    200',           next(report))
-        self.assertEqual('    Group total:                 12526',    next(report))
-        self.assertEqual('',                                          next(report))
-        self.assertEqual('Total:                           13570',    next(report))
-        self.assertRaises(StopIteration, next, report)
+        report_lines = process_all(records)
+        assert '\n'.join(report_lines) == """\
+Group: 001
+    Product: 0001 Value:     12
+    Product: 0012 Value:   1032
+    Group total:                  1044
+
+Group: 007
+    Product: 0009 Value:    207
+    Product: 0112 Value:  12119
+    Product: 1009 Value:    200
+    Group total:                 12526
+
+Total:                           13570"""

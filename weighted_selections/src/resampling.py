@@ -1,10 +1,12 @@
-from math import sqrt, exp, pi as π, log
+from math import sqrt, exp, pi as π, log as ln
 from random import choices, gauss, uniform
 
 import matplotlib.pyplot as plt
 import numpy as np
 
-from SD_Python_meetup_20171026.src.timethis import timethis, timeblock
+from weighted_selections.src.timethis import timethis, timeblock
+
+
 # In Python 3.6: random.choices(samples, weights, k = 1)
 
 def numpy_choices(samples, weights, k=1):
@@ -30,7 +32,7 @@ def my_choices_slow(samples, weights, k=1):
 
 
 def exponential(λ=1.0):
-    return -log(uniform(0, 1)) * λ
+    return -ln(uniform(0, 1)) * λ
 
 
 def my_choices_fast(samples, weights, k=1):
@@ -67,7 +69,7 @@ def show_uniform_diffs_dist(sample_size, bins):
 
 
 def show_exponential_dist(sample_size, bins):
-    plt.hist([-log(uniform(0, 1)) for _ in range(sample_size + 1)], bins)
+    plt.hist([-ln(uniform(0, 1)) for _ in range(sample_size + 1)], bins)
     plt.show()
 
 
@@ -75,7 +77,7 @@ def show_exponential_sum_dist(sample_size, bins):
     def gen_events():
         e = 0
         for _ in range(sample_size):
-            e += -log(uniform(0, 1))
+            e += -ln(uniform(0, 1))
             yield e
 
     plt.hist([w for w in gen_events()], bins)
@@ -105,9 +107,9 @@ def compare_choices_algos(num_samples, repeats):
 @timethis
 def particle_filter_step(samples_pre, *, resampling):
     weights = [gaussian_pdf(x, μ=2.6, σ=3.5) for x in samples_pre]
-    print('Prior: mean = %.2f, sigma = %.2f' % mean_and_sigma(samples_pre))
+    print("Prior: μ = %.3f, σ = %.3f" % mean_and_sigma(samples_pre))
     samples_post = resampling(samples_pre, weights, k=len(samples_pre))
-    print('Posterior: mean = %.2f, sigma = %.2f' % mean_and_sigma(samples_post))
+    print("Posterior: μ' = %.3f, σ' = %.3f" % mean_and_sigma(samples_post))
     # Update samples states (control and diffusion)
 
 
@@ -129,7 +131,7 @@ def theoretically(mu_0, sigma_0, mu_1, sigma_1):
 def compare_particle_filter_step(num_samples):
     print("\nThe theoretical result")
     print("======================")
-    print("μ' = %.2f, σ' = %.2f" % theoretically(5.2, 6.5, 2.6, 3.5))
+    print("μ' = %.3f, σ' = %.3f" % theoretically(5.2, 6.5, 2.6, 3.5))
 
     samples_pre = [gauss(5.2, 6.5) for _ in (range(num_samples))]
 
@@ -151,4 +153,4 @@ def compare_particle_filter_step(num_samples):
 
 
 if __name__ == "__main__":
-    compare_particle_filter_step(100000)
+    compare_particle_filter_step(500_000)
