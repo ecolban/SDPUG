@@ -12,6 +12,7 @@ jupyter = "*"
 notebook = ">=6.1.5"
 timethis = "*"
 nbdev = "*"
+pytest = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.9"
