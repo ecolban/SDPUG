@@ -1,5 +1,6 @@
 from collections import defaultdict, Counter
 from random import choice
+from bible_to_string import get_bible_as_str
 
 
 def mystery(n):
@@ -143,15 +144,16 @@ def longest_palindrome_everted(s):
 
 if __name__ == "__main__":
     int_sqrt(5000)
-    # print([(i, *mystery(i)) for i in range(5, 101, 5)])
-    # d = defaultdict(int)
-    # for _ in range(100):
-    #     s = ''.join(choice('ucga') for _ in range(100000))
-    #     p1 = longest_palindrome(s)
-    #     p2 = longest_palindrome_2(s)
-    #     assert p1 == p2
-    #     d[len(p1)] += 1
-    # print(sorted(d.items()))
+    print([(i, *mystery(i)) for i in range(5, 101, 5)])
+    d = defaultdict(int)
+    for _ in range(100):
+        s = ''.join(choice('ucga') for _ in range(100000))
+        p1 = longest_palindrome(s)
+        p2 = longest_palindrome_2(s)
+        assert p1 == p2
+        d[len(p1)] += 1
+    print(sorted(d.items()))
+    print(longest_palindrome(get_bible_as_str()))
 
 # [(18, 8), (19, 125), (20, 164), (21, 336), (22, 111), (23, 156), (24, 39), (25, 33),
 #  (26, 8), (27, 12), (28, 6), (29, 2)]
