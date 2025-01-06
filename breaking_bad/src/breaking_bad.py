@@ -1,7 +1,9 @@
-import os
 from collections import deque
 from dataclasses import dataclass
-from random import randrange, choice
+from pathlib import Path
+
+with open(Path(__file__).parent.parent / 'assets/words.txt', mode='r') as f:
+    WORDS = [word.strip() for word in f]
 
 
 @dataclass(frozen=True)
@@ -12,7 +14,6 @@ class TreeNode:
     def __str__(self):
         def h(tree):
             yield tree.root
-            if not tree.children: return
             for i, child in enumerate(tree.children, start=1):
                 last = i == len(tree.children)
                 child_lines = h(child)
@@ -22,14 +23,23 @@ class TreeNode:
 
         return '\n'.join(h(self))
 
+    def breadth_first_iterator(self):
+        q = deque()
+        q.append(self)
+        while q:
+            node = q.popleft()
+            yield node.root
+            q.extend(node.children)
 
-def make_random_tree(height):
-    d = os.path.dirname(__file__)
-    with open(os.path.join(d, '..', 'assets', 'words.txt'), 'r') as f:
-        word_list = [word.strip() for word in f]
-    if height <= 1: return TreeNode(choice(word_list), ())
-    return TreeNode(choice(word_list),
-                    tuple(make_random_tree(height - 1) for _ in range(randrange(1, 4))))
+    def depth_first_iterator(self):
+        yield self.root
+        for child in self.children:
+            yield from child.depth_first_iterator()
+
+    __iter__ = depth_first_iterator
+
+    def __len__(self):
+        return sum(1 for _ in self)
 
 
 def breadth_first_search(tree, matcher):
@@ -39,13 +49,4 @@ def breadth_first_search(tree, matcher):
         node = q.popleft()
         if matcher(node.root):
             return node.root
-        q.extend(node.children)
-
-
-def breadth_first_walk(tree):
-    q = deque()
-    q.append(tree)
-    while q:
-        node = q.popleft()
-        yield node.root
         q.extend(node.children)
